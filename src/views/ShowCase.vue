@@ -1,19 +1,21 @@
 <template>
-    <div>
-      <h1>🎨 My Design Showcase</h1>
-      <ul>
-        <li v-for="design in designs" :key="design.name">
-          <RouterLink :to="design.path">{{ design.title }}</RouterLink>
-        </li>
-      </ul>
-    </div>
-  </template>
-  
-  <script setup>
+  <div class="grid">
+    <HelloWorld />
+    <Card />
+    <!-- Add more components here -->
+  </div>
+</template>
 
-  const designs = [
-    { name: "Design1", title: "Design 1 - Greeting", path: "/design/1" },
-    { name: "Design2", title: "Design 2 - Cool Card", path: "/design/2" },
-  ]
-  </script>
-  
+<script setup>
+import HelloWorld from '../designs/HelloWorld.vue'
+import Card from '../designs/Card.vue'
+// Add more designs here as you create them
+</script>
+
+<style scoped>
+.grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+</style>

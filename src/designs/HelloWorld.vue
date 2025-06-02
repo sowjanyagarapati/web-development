@@ -1,5 +1,5 @@
 <template>
-    <div class="design">
+    <div class="design-box">
       <h2>{{ message }}</h2>
     </div>
   </template>
@@ -8,11 +8,13 @@
   const message = "Hello from Design 1!"
   </script>
   
-  <style scoped>
-  .design {
-    padding: 2rem;
-    background: lightyellow;
-    border: 2px solid orange;
-  }
+<style scoped>
+.design-box {
+  padding: 1rem;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
   </style>
   
